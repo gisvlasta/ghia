@@ -798,14 +798,21 @@ let MapLayers = {
         style: function(feature) {
           // TODO: RESIN - Change next line.
 
-          let isVisible = MapLayers.lsoas.classes[feature.properties.class.toString()].visible;
+          // TODO: WORKAROUND for the class = 0 bug. (Introduced feature.properties.class !==0 because 2 LSOAs have a class of 0).
+          if (feature.properties.class !==0) {
+            let isVisible = MapLayers.lsoas.classes[feature.properties.class.toString()].visible;
 
-          if (isVisible) {
-            return MapLayers.lsoas.namedBasemapLayers[namedBaseMap].pc10[feature.properties.class];
+            if (isVisible) {
+              return MapLayers.lsoas.namedBasemapLayers[namedBaseMap].pc10[feature.properties.class];
+            }
+            else {
+              return MapLayers.nuts3.namedBasemapLayers[namedBaseMap].defaultStyle;
+            }
           }
           else {
             return MapLayers.nuts3.namedBasemapLayers[namedBaseMap].defaultStyle;
           }
+
         },
 
         /**
