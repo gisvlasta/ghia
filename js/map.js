@@ -27,6 +27,22 @@ let GlobalFunctions = {
 
 };
 
+
+var AppData = AppData || {};
+
+AppData.cidrs = {
+  '1': { cidr1: [-4.65081407200001, -9.301628144, -13.95244222, -18.60325629, -23.25407036], cidr2: [0, 0, 0, 0, 0] },
+  '2': { cidr1: [], cidr2: [] },
+  '3': { cidr1: [], cidr2: [] },
+  '4': { cidr1: [], cidr2: [] },
+  '5': { cidr1: [], cidr2: [] },
+  '6': { cidr1: [], cidr2: [] },
+  '7': { cidr1: [], cidr2: [] },
+  '8': { cidr1: [], cidr2: [] },
+  '9': { cidr1: [], cidr2: [] }
+};
+
+
 /**
  * The AppState object holds the application state.
  */
@@ -2051,7 +2067,6 @@ let Spatial = {
     BaseMapLayers.setNamedBasemapLayers();
     BaseMapLayers.createBaseMapLayers();
 
-    alert('lala');
     //MapLayers.lsoas.createLayer();
 
     Spatial.setInitialBaseMapLayer();
@@ -3387,16 +3402,14 @@ let toggleBaseMapViewModel = new Vue({
 // ================================================================================
 //  Main Body
 
-$(document).ready(function(){
-  AppState.bootstrapMaterialTooltipEnabled = true;
-  $('[data-toggle="tooltip"]').tooltip();
-});
+// $(document).ready(function(){
+//   AppState.bootstrapMaterialTooltipEnabled = true;
+//   $('[data-toggle="tooltip"]').tooltip();
+// });
 
 Spatial.initializeMap();
 
-// radarContainerViewModel.bindResizeEvent();
-
-Spatial.sidebar.open('map-controls');
+//Spatial.sidebar.open('map-controls');
 
 //
 // ================================================================================
