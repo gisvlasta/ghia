@@ -27,21 +27,19 @@ let GlobalFunctions = {
 
 };
 
-
 var AppData = AppData || {};
 
 AppData.cidrs = {
-  '1': { cidr1: [-4.65081407200001, -9.301628144, -13.95244222, -18.60325629, -23.25407036], cidr2: [0, 0, 0, 0, 0] },
-  '2': { cidr1: [], cidr2: [] },
-  '3': { cidr1: [], cidr2: [] },
-  '4': { cidr1: [], cidr2: [] },
-  '5': { cidr1: [], cidr2: [] },
-  '6': { cidr1: [], cidr2: [] },
-  '7': { cidr1: [], cidr2: [] },
-  '8': { cidr1: [], cidr2: [] },
-  '9': { cidr1: [], cidr2: [] }
+  '1': { cidr1: [-4.650814072	, -9.301628144, -13.95244222, -18.60325629, -23.25407036], cidr2: [0, 0, 0, 0, 0] },
+  '2': { cidr1: [-3.225569044	, -6.451138087, -9.676707131, -12.90227617, -16.12784522], cidr2: [-1.193358336, -2.386716672, -3.580075008, -4.773433344, -5.96679168] },
+  '3': { cidr1: [-4.721955092	, -9.443910185, -14.16586528, -18.88782037, -23.60977546], cidr2: [0, 0, 0, 0, 0] },
+  '4': { cidr1: [-5.217569945, -10.43513989, -15.65270983, -20.87027978, -26.08784972], cidr2: [-3.060723301, -6.121446601, -9.182169902, -12.2428932, -15.3036165] },
+  '5': { cidr1: [-2.960786329, -5.921572657, -8.882358986, -11.84314531, -14.80393164], cidr2: [0, 0, 0, 0, 0] },
+  '6': { cidr1: [-0.907805405, -1.815610811, -2.723416216, -3.631221621, -4.539027026], cidr2: [0, 0, 0, 0, 0] },
+  '7': { cidr1: [-1.809751256, -3.619502512, -5.429253767, -7.239005023, -9.048756279], cidr2: [0, 0, 0, 0, 0] },
+  '8': { cidr1: [-2.277051317, -4.554102633, -6.83115395, -9.108205267, -11.38525658], cidr2: [0, 0, 0, 0, 0] },
+  '9': { cidr1: [-1.863333382, -3.726666764, -5.590000146, -7.453333528, -9.31666691], cidr2: [-1.120659266, -2.241318532, -3.361977798, -4.482637064, -5.60329633] }
 };
-
 
 /**
  * The AppState object holds the application state.
@@ -441,6 +439,21 @@ let MapLayers = {
           fillOpacity: 0.4
           //lineCap: 'round',  // butt | round | square | inherit
           //lineJoin: 'round'  // miter | round | bevel | inherit
+        },
+
+        /**
+         * The styles used to render the LSOA polygons based on their cidr1 on top of the Light Basemap.
+         */
+        pc10: {
+          '1': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.purple100.hex, fillOpacity: 0.7 },
+          '2': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.green100.hex, fillOpacity: 0.7 },
+          '3': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.teal100.hex, fillOpacity: 0.7 },
+          '4': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.deepOrange100.hex, fillOpacity: 0.7 },
+          '5': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.indigo100.hex, fillOpacity: 0.7 },
+          '6': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.amber100.hex, fillOpacity: 0.7 },
+          '7': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.lightBlue100.hex, fillOpacity: 0.7 },
+          '8': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.blueGray100.hex, fillOpacity: 0.7 },
+          '9': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.cyan100.hex, fillOpacity: 0.7 }
         }
 
       },
@@ -477,6 +490,21 @@ let MapLayers = {
           fillOpacity: 0.4
           //lineCap: 'round',  // butt | round | square | inherit
           //lineJoin: 'round'  // miter | round | bevel | inherit
+        },
+
+        /**
+         * The styles used to render the LSOA polygons based on their cidr1 on top of the Light Basemap.
+         */
+        pc10: {
+          '1': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.purple100.hex, fillOpacity: 0.7 },
+          '2': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.green100.hex, fillOpacity: 0.7 },
+          '3': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.teal100.hex, fillOpacity: 0.7 },
+          '4': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.deepOrange100.hex, fillOpacity: 0.7 },
+          '5': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.indigo100.hex, fillOpacity: 0.7 },
+          '6': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.amber100.hex, fillOpacity: 0.7 },
+          '7': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.lightBlue100.hex, fillOpacity: 0.7 },
+          '8': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.blueGray100.hex, fillOpacity: 0.7 },
+          '9': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.cyan100.hex, fillOpacity: 0.7 }
         }
 
       },
@@ -513,6 +541,21 @@ let MapLayers = {
           fillOpacity: 0.4
           //lineCap: 'round',  // butt | round | square | inherit
           //lineJoin: 'round'  // miter | round | bevel | inherit
+        },
+
+        /**
+         * The styles used to render the LSOA polygons based on their cidr1 on top of the Light Basemap.
+         */
+        pc10: {
+          '1': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.purple100.hex, fillOpacity: 0.7 },
+          '2': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.green100.hex, fillOpacity: 0.7 },
+          '3': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.teal100.hex, fillOpacity: 0.7 },
+          '4': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.deepOrange100.hex, fillOpacity: 0.7 },
+          '5': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.indigo100.hex, fillOpacity: 0.7 },
+          '6': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.amber100.hex, fillOpacity: 0.7 },
+          '7': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.lightBlue100.hex, fillOpacity: 0.7 },
+          '8': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.blueGray100.hex, fillOpacity: 0.7 },
+          '9': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.cyan100.hex, fillOpacity: 0.7 }
         }
 
       },
@@ -549,6 +592,21 @@ let MapLayers = {
           fillOpacity: 0.4
           //lineCap: 'round',  // butt | round | square | inherit
           //lineJoin: 'round'  // miter | round | bevel | inherit
+        },
+
+        /**
+         * The styles used to render the LSOA polygons based on their cidr1 on top of the Light Basemap.
+         */
+        pc10: {
+          '1': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.purple100.hex, fillOpacity: 0.7 },
+          '2': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.green100.hex, fillOpacity: 0.7 },
+          '3': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.teal100.hex, fillOpacity: 0.7 },
+          '4': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.deepOrange100.hex, fillOpacity: 0.7 },
+          '5': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.indigo100.hex, fillOpacity: 0.7 },
+          '6': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.amber100.hex, fillOpacity: 0.7 },
+          '7': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.lightBlue100.hex, fillOpacity: 0.7 },
+          '8': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.blueGray100.hex, fillOpacity: 0.7 },
+          '9': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.cyan100.hex, fillOpacity: 0.7 }
         }
 
       },
@@ -585,6 +643,21 @@ let MapLayers = {
           fillOpacity: 0.4
           //lineCap: 'round',  // butt | round | square | inherit
           //lineJoin: 'round'  // miter | round | bevel | inherit
+        },
+
+        /**
+         * The styles used to render the LSOA polygons based on their cidr1 on top of the Light Basemap.
+         */
+        pc10: {
+          '1': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.purple100.hex, fillOpacity: 0.7 },
+          '2': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.green100.hex, fillOpacity: 0.7 },
+          '3': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.teal100.hex, fillOpacity: 0.7 },
+          '4': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.deepOrange100.hex, fillOpacity: 0.7 },
+          '5': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.indigo100.hex, fillOpacity: 0.7 },
+          '6': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.amber100.hex, fillOpacity: 0.7 },
+          '7': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.lightBlue100.hex, fillOpacity: 0.7 },
+          '8': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.blueGray100.hex, fillOpacity: 0.7 },
+          '9': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.cyan100.hex, fillOpacity: 0.7 }
         }
 
       },
@@ -621,6 +694,21 @@ let MapLayers = {
           fillOpacity: 0.4
           //lineCap: 'round',  // butt | round | square | inherit
           //lineJoin: 'round'  // miter | round | bevel | inherit
+        },
+
+        /**
+         * The styles used to render the LSOA polygons based on their cidr1 on top of the Light Basemap.
+         */
+        pc10: {
+          '1': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.purple100.hex, fillOpacity: 0.7 },
+          '2': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.green100.hex, fillOpacity: 0.7 },
+          '3': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.teal100.hex, fillOpacity: 0.7 },
+          '4': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.deepOrange100.hex, fillOpacity: 0.7 },
+          '5': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.indigo100.hex, fillOpacity: 0.7 },
+          '6': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.amber100.hex, fillOpacity: 0.7 },
+          '7': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.lightBlue100.hex, fillOpacity: 0.7 },
+          '8': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.blueGray100.hex, fillOpacity: 0.7 },
+          '9': { stroke: true, color: '#282828', weight: 0.4, opacity: 1, fill: true, fillColor: ColorPalettes.Material.cyan100.hex, fillOpacity: 0.7 }
         }
 
       }
@@ -652,6 +740,186 @@ let MapLayers = {
      * The internal layer of the selected NUTS3 feature.
      */
     selectedInternalLayer: null,
+
+    /**
+     * The classes metadata in the form of a dictionary whose keys are the values of classes.
+     */
+    classes: {
+      '1': {
+        class: 1, visible: true, name: 'Younger Low Income'
+      },
+      '2': {
+        class: 2, visible: true, name: 'Younger Medium Income'
+      },
+      '3': {
+        class: 3, visible: true, name: 'Younger High Income'
+      },
+      '4': {
+        class: 4, visible: true, name: 'Middle Low Income'
+      },
+      '5': {
+        class: 5, visible: true, name: 'Middle Medium Income'
+      },
+      '6': {
+        class: 6, visible: true, name: 'Middle High Income'
+      },
+      '7': {
+        class: 7, visible: true, name: 'Older Low Income'
+      },
+      '8': {
+        class: 8, visible: true, name: 'Older Middle Income'
+      },
+      '9': {
+        class: 9, visible: true, name: 'Older Higher Income'
+      }
+    },
+
+    /**
+     * Creates the LSOAs layer.
+     */
+    createLayer: function() {
+
+      // TODO: RESIN - Check next line.
+      // spinnerViewModel.isVisible = true;
+
+      // Get the named basemap layer.
+      let namedBaseMap = toggleBaseMapViewModel.currentBaseMap;
+
+      this.geoJSON = AppData.lsoaPolygons;
+
+      this.mapLayer = L.geoJSON(this.geoJSON, {
+
+        /**
+         * The LSOAs layer attribution to insert on the map.
+         */
+        attribution: MapLayers.lsoas.attribution,
+
+        // TODO: RESIN - Correct rendering code to allow the use of the current basemap and the current rendering method (typology supergroups / groups or indicators)
+        style: function(feature) {
+          // TODO: RESIN - Change next line.
+
+          let isVisible = MapLayers.lsoas.classes[feature.properties.class.toString()].visible;
+
+          if (isVisible) {
+            return MapLayers.lsoas.namedBasemapLayers[namedBaseMap].pc10[feature.properties.class];
+          }
+          else {
+            return MapLayers.nuts3.namedBasemapLayers[namedBaseMap].defaultStyle;
+          }
+        },
+
+        /**
+         * Define the behaviour of each feature.
+         *
+         * @param feature - The feature whose behaviour will be defined.
+         * @param layer - The internal layer of each feature.
+         */
+        // onEachFeature: function(feature, layer) {
+        //   layer.on({
+        //
+        //     /**
+        //      * Raised when the mouse is over a feature.
+        //      */
+        //     mouseover: function() {
+        //       MapLayers.nuts3.showTooltip(layer);
+        //       MapLayers.nuts3.highlightNuts3(feature, layer);
+        //     },
+        //
+        //     /**
+        //      * Raised when the mouse is going out of a feature.
+        //      */
+        //     mouseout: function() {
+        //       MapLayers.nuts3.hideTooltip(layer);
+        //       MapLayers.nuts3.resetNuts3Style(feature, layer, false);
+        //       MapLayers.nuts3.reselectNuts3();
+        //     },
+        //
+        //     /**
+        //      * Raised when a feature is clicked.
+        //      */
+        //     click: function() {
+        //       MapLayers.nuts3.selectNuts3(feature, layer);
+        //       MapLayers.nuts3.updateInfo(feature);
+        //     },
+        //
+        //     /**
+        //      * Raised when a feature is double clicked.
+        //      */
+        //     dblclick: function() {
+        //       //MapLayers.nuts3.resetNuts3Style(feature, layer);
+        //       //alert('double clicked');
+        //       //map.doubleClickZoom.disable();
+        //       //map.doubleClickZoom.enable()
+        //       // TODO: This is a problem. A click event is fired before the double click. We need to change this behaviour.
+        //       //Spatial.map.fitBounds(layer.getBounds());
+        //     }
+        //
+        //   });
+        // }
+      });
+
+      // Add the layer in to the map and make sure it is visible.
+      this.mapLayer.addTo(Spatial.map);
+      this.mapLayer.bringToFront();
+
+      // Loop through all the internal layers.
+      // Create the feature to internal layer dictionary and bind the layer tooltips.
+      // this.mapLayer.eachLayer(function(layer) {
+      //   MapLayers.nuts3.featureToInternalLayerDictionary[layer.feature.properties.NUTS_ID] = layer._leaflet_id;
+      //
+      //   layer.bindTooltip('', {
+      //     // TODO: RESIN - Check here the final tooltip options.
+      //     direction: 'top', // TODO: RESIN - APPVAR
+      //     offset: [0, -30], // TODO: RESIN - APPVAR
+      //     sticky: true
+      //   });
+      // });
+
+    },
+
+    /**
+     * Renders the NUTS3 layer.
+     */
+    // renderLayer: function() {
+    //
+    //   // Get the current basemap. This is used to decide the symbology of the NUTS3 polygons.
+    //   let currentBaseMap = toggleBaseMapViewModel.currentBaseMap;
+    //
+    //   // Get the current tab.
+    //   let currentTab = symbologyViewModel.currentTab;
+    //
+    //   // Check whether NUTS3 features exist or not.
+    //   if (this.geoJSON !== undefined || this.geoJSON !== null) {
+    //
+    //     // Loop through the NUTS3 features.
+    //     for (i = 0; i < this.geoJSON.features.length; i++) {
+    //
+    //       // Get the NUTS3 feature, attribute name and the class value.
+    //       let feature = this.geoJSON.features[i];
+    //
+    //       if (currentTab !== 'indicators') {
+    //         // Render the layer based on typology classes (supergroups or groups).
+    //         let attributeName = this.typologyLevelDictionary[currentTab].attributeName;
+    //         let classValue = feature.properties[attributeName].toString();
+    //
+    //         // Render the NUTS3 polygon having the specified typology class.
+    //         this.renderNuts3PolygonByTypologyClass(feature, classValue, currentTab, currentBaseMap);
+    //       }
+    //       else {
+    //         let indicator = symbologyViewModel.selectedIndicators[symbologyViewModel.currentDomain][0];
+    //         let zscore = feature.properties[indicator + 'Z'];
+    //
+    //         // Render the layer based on the selected indicator.
+    //         this.renderNuts3PolygonByIndicator(feature, indicator, zscore);
+    //       }
+    //
+    //     }
+    //
+    //   }
+    //
+    //   MapLayers.nuts3.reselectNuts3();
+    //
+    // },
 
 
   },
@@ -2067,7 +2335,7 @@ let Spatial = {
     BaseMapLayers.setNamedBasemapLayers();
     BaseMapLayers.createBaseMapLayers();
 
-    //MapLayers.lsoas.createLayer();
+    MapLayers.lsoas.createLayer();
 
     Spatial.setInitialBaseMapLayer();
 
@@ -2216,10 +2484,10 @@ let toggleBaseMapViewModel = new Vue({
 
       this.currentBaseMap = namedBaseMap;
 
-      if (AppState.bootstrapMaterialTooltipEnabled) {
-        let element = '#' + namedBaseMap + 'Button';
-        $(element).tooltip('hide');
-      }
+      // if (AppState.bootstrapMaterialTooltipEnabled) {
+      //   let element = '#' + namedBaseMap + 'Button';
+      //   $(element).tooltip('hide');
+      // }
 
       // Add the new current basemap layer.
       let baseLayer = BaseMapLayers.namedBasemapLayers[this.currentBaseMap].mapLayer;
@@ -2227,7 +2495,8 @@ let toggleBaseMapViewModel = new Vue({
       baseLayer.addTo(Spatial.map);
       baseLayer.bringToBack();
 
-      MapLayers.nuts3.renderLayer();
+      //MapLayers.nuts3.renderLayer();
+      MapLayers.lsoas.renderLayer();
 
     }
 
